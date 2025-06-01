@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LoansBannerSectionImg from '../../../Assets/credit-card-payment-receipt.png'
 
 const LoansBannerSection = () => {
    
@@ -20,7 +21,7 @@ const LoansBannerSection = () => {
     <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-10 hidden lg:block">
       <img
         // src="../src/Assets/LoansBanner.svg"
-        src="../src/Assets/credit-card-payment-receipt.png"
+        src={LoansBannerSectionImg}
         alt="Loans Banner"
         className="w-64 h-64 object-contain"
         style={{ background: "transparent" }}

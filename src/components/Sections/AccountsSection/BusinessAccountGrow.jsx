@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import BusinessAccountImg from '../../../Assets/Savings_Account.svg'
 
 const benefits = [
   "Seamless Transactions & Payments",
@@ -43,7 +44,7 @@ const BusinessAccountGrow = () => {
         {/* Illustration Section */}
         <div className="flex-1 flex justify-center items-center">
           <img
-            src="../src/Assets/Savings_Account.svg"
+            src={BusinessAccountImg}
             alt="Business Account Growth Illustration"
             className="w-full max-w-md h-auto"
             draggable="false"

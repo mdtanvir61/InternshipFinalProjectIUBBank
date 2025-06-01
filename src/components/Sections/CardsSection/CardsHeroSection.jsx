@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import CardHeroSectionImg from '../../../Assets/CardsLeftSideImage.svg'
 
 const CardsHeroSection = () => {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const CardsHeroSection = () => {
         {/* Right Illustration */}
         <div className="flex-1 flex justify-center md:justify-end">
           <img
-            src="./src/Assets/CardsLeftSideImage.svg"
+            src={CardHeroSectionImg}
             alt="Account Illustration"
             className="w-80 h-80 md:w-[420px] md:h-[420px] object-contain"
             loading="lazy"

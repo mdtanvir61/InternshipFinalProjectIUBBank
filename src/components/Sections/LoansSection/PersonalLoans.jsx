@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import PersonalLoanBanner from '../../../Assets/TransferMoney.svg'
 
 const PersonalLoan = () => {
 const navigate = useNavigate();
@@ -8,7 +9,7 @@ const navigate = useNavigate();
         {/* Left Illustration */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start mt-8 md:mt-0">
           <img
-            src="../src/Assets/TransferMoney.svg"
+            src={PersonalLoanBanner}
             alt="Personal Loan Illustration"
             className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto"
           />

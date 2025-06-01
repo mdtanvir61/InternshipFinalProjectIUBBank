@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CardsBannerImg from '../../../Assets/CreditCardHero.svg'
 
 const CardsBannerSection = () => {
    
@@ -19,7 +20,7 @@ const CardsBannerSection = () => {
     {/* Right Piggy Bank Illustration */}
     <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-10 hidden lg:block">
       <img
-        src="../src/Assets/CreditCardHero.svg"
+        src={CardsBannerImg}
         alt="Credit Card"
         className="w-64 h-64 object-contain"
         style={{ background: "transparent" }}
