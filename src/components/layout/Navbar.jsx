@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../Context/Context.jsx';
+import logoIcon from '../../Assets/IUB_Uni_logo.png'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +45,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img src="../src/Assets/IUB_Uni_logo.png" className="h-8 md:h-12 lg:h-14" alt="IUB Bank" />
+            <img src={logoIcon} className="h-8 md:h-12 lg:h-14" alt="IUB Bank" />
           </Link>
 
           <div className="hidden md:flex items-center space-x-1 lg:space-x-6">
