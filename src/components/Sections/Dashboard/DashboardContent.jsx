@@ -220,11 +220,24 @@ const DashboardContent = () => {
                     key={idx}
                     className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b last:border-b-0 px-4 sm:px-6 md:px-8 py-4 md:py-6 gap-2"
                   >
-                    <div className="flex items-center">
-                      {getBadge(transaction.type, idx)}
-                      <span className="text-gray-700 font-semibold text-sm md:text-base">
-                        {formatDate(transaction.date)}
-                      </span>
+                    <div className="flex flex-col">
+                      <div className="flex items-center">
+                        {getBadge(transaction.type, idx)}
+                        <span className="text-gray-700 font-semibold text-sm md:text-base">
+                          {formatDate(transaction.date)}
+                        </span>
+                      </div>
+                      {/* Show email for Transfer and Received */}
+                      {transaction.type === "Transfer" && transaction.to && (
+                        <span className="text-xs text-gray-500 font-bold ml-2 mt-4">
+                          To: {transaction.to}
+                        </span>
+                      )}
+                      {transaction.type === "Received" && transaction.from && (
+                        <span className="text-xs text-gray-500 font-bold ml-2 mt-4">
+                          From: {transaction.from}
+                        </span>
+                      )}
                     </div>
                     <div
                       className={`text-base sm:text-lg md:text-2xl font-bold ${
@@ -275,7 +288,7 @@ const DashboardContent = () => {
                 className="flex items-center justify-center bg-white text-gray-700 font-bold rounded-md w-full h-10 sm:h-12 hover:bg-yellow-200 transition text-xl sm:text-2xl mt-2"
                 title="Transfer"
               >
-                &rarr;
+               Send Money
               </button>
             </form>
           </div>
