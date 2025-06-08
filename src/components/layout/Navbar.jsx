@@ -97,7 +97,7 @@ const Navbar = () => {
         <div className="fixed inset-0 z-[100] bg-white shadow-lg md:hidden flex flex-col">
           <div className="flex justify-between items-center px-4 py-4 border-b border-gray-100">
             <Link to="/" className="flex items-center space-x-2 text-blue-700 text-xl font-bold">
-               <img src="../src/Assets/IUB_Uni_logo.png" className="h-8 md:h-12 lg:h-14" alt="IUB Bank" />
+               <img src={logoIcon} className="h-8 md:h-12 lg:h-14" alt="IUB Bank" />
             </Link>
             <button className="text-gray-700 p-2" onClick={toggleMobileMenu}>
               X
