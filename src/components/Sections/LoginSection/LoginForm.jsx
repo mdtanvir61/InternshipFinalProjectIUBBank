@@ -69,10 +69,10 @@ const LoginForm = () => {
             The Power of Financial Freedom
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-3 text-[#0a2540]">
-            Set Up Your Password
+            Login to Your Account
           </h2>
           <p className="text-gray-600 mb-8">
-            Your security is our top priority. You’ll need this to log into your Iub Bank account
+            Your security is our top priority. You'll need this to log into your Iub Bank account
           </p>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -125,7 +125,14 @@ const LoginForm = () => {
               )}
             </button>
             <div className="flex justify-end mt-1">
-              <a href="/reset" className="text-sm text-gray-500 hover:underline">
+              <a
+                href="/reset"
+                className="text-sm text-gray-500 hover:underline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/reset");
+                }}
+              >
                 Forgot Password?
               </a>
             </div>
@@ -167,7 +174,14 @@ const LoginForm = () => {
         </div>
         <div className="text-center text-gray-600">
           Don't have an account?{" "}
-          <a href="/register" className="text-[#1753c6] font-semibold hover:underline">
+          <a
+            href="/register"
+            className="text-[#1753c6] font-semibold hover:underline"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/register");
+            }}
+          >
             Register
           </a>
         </div>
